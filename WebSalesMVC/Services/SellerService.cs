@@ -21,6 +21,7 @@ namespace WebSalesMVC.Services
         }
         public void Insert(Seller obj)
         {
+            obj.Deparment = _context.DepartmentModel.First();
             _context.Add(obj);
             _context.SaveChanges();
         }
