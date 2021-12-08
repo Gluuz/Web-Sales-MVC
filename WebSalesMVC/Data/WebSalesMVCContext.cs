@@ -15,7 +15,7 @@ namespace WebSalesMVC.Data
         }
 
         public DbSet<DepartmentModel> DepartmentModel { get; set; }
-        public DbSet<SellerModel> Seller { get; set; }
-        public DbSet<SalesRecordModel> SalesRecord { get; set; }
+        public DbSet<Seller> Seller { get; set; }
+        public DbSet<SalesRecord> SalesRecord { get; set; }
     }
 }

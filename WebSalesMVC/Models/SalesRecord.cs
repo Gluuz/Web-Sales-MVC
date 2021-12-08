@@ -2,19 +2,19 @@
 
 namespace WebSalesMVC.Models
 {
-    public class SalesRecordModel
+    public class SalesRecord
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
         public double Amount { get; set; }
         public SaleStatusModel Status { get; set; }
-        public SellerModel Seller { get; set; } 
+        public Seller Seller { get; set; } 
 
-        public SalesRecordModel()
+        public SalesRecord()
         {
         }
 
-        public SalesRecordModel(int id, DateTime date, double amount, SaleStatusModel status, SellerModel seller)
+        public SalesRecord(int id, DateTime date, double amount, SaleStatusModel status, Seller seller)
         {
             Id = id;
             Date = date;

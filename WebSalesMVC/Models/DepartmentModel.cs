@@ -10,7 +10,7 @@ namespace WebSalesMVC.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public ICollection<SellerModel> Sellers { get; set; } = new List<SellerModel>();
+        public ICollection<Seller> Sellers { get; set; } = new List<Seller>();
         public DepartmentModel()
         {
         }
@@ -20,7 +20,7 @@ namespace WebSalesMVC.Models
             Id = id;
             Name = name;
         }
-        public void AddSeller(SellerModel seller)
+        public void AddSeller(Seller seller)
         {
             Sellers.Add(seller);
         }

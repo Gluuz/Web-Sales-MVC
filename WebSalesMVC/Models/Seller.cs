@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebSalesMVC.Models
 {
-    public class SellerModel
+    public class Seller
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -13,13 +13,13 @@ namespace WebSalesMVC.Models
         public DateTime BirthDate { get; set; }
         public double BaseSalary { get; set; }
         public DepartmentModel Deparment { get; set; }
-        public ICollection<SalesRecordModel> Sales { get; set; } = new List<SalesRecordModel>();
+        public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
-        public SellerModel()
+        public Seller()
         {
         }
 
-        public SellerModel(int id, string name, string email, DateTime birthDate, double baseSalary, DepartmentModel deparment)
+        public Seller(int id, string name, string email, DateTime birthDate, double baseSalary, DepartmentModel deparment)
         {
             Id = id;
             Name = name;
@@ -28,11 +28,11 @@ namespace WebSalesMVC.Models
             BaseSalary = baseSalary;
             Deparment = deparment;
         }
-        public void AddSales(SalesRecordModel sr)
+        public void AddSales(SalesRecord sr)
         {
             Sales.Add(sr);
         }
-        public void RemoveSales(SalesRecordModel sr)
+        public void RemoveSales(SalesRecord sr)
         {
             Sales.Remove(sr);
         }
