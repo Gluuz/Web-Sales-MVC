@@ -7,22 +7,17 @@ using WebSalesMVC.Models;
 
 namespace WebSalesMVC.Services
 {
-    public class SellerService
+    public class DepartmentService
     {
         private readonly WebSalesMVCContext _context;
 
-        public SellerService(WebSalesMVCContext context)
+        public DepartmentService(WebSalesMVCContext context)
         {
             _context = context;
         }
-        public List<Seller> FindAll()
+        public List<DepartmentModel> FindAll()
         {
-            return _context.Seller.ToList();
-        }
-        public void Insert(Seller obj)
-        {
-            _context.Add(obj);
-            _context.SaveChanges();
+            return _context.DepartmentModel.OrderBy(x => x.Name).ToList();
         }
     }
 }
